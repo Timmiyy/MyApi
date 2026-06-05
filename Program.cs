@@ -3,19 +3,21 @@ var builder = WebApplication.CreateBuilder(args);
 // Add controllers
 builder.Services.AddControllers();
 
-builder.Services.AddOpenApi();
+// 🔥 ADD SWAGGER
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure pipeline
+// 🔥 ENABLE SWAGGER UI (only in development)
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-// Enable controller routing
 app.MapControllers();
 
 app.Run();

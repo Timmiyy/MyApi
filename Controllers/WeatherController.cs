@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyApi.Models;
 
 namespace MyApi.Controllers
 {
@@ -35,6 +36,22 @@ namespace MyApi.Controllers
             {
                 date = DateTime.Now,
                 message = "Current server date and time"
+            });
+        }
+
+        // POST: api/weather/request
+        [HttpPost("request")]
+        public IActionResult CreateWeatherRequest(WeatherRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok(new
+            {
+                Message = "Request received successfully",
+                Data = request
             });
         }
     }
