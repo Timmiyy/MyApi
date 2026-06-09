@@ -38,5 +38,6 @@ app.UseMiddleware<CorrelationIdMiddleware>();
 app.UseHttpsRedirection();
 
 app.MapControllers();
+app.MapGet("/", () => "Weather API is running");
 
 app.Run();

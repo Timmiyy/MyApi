@@ -99,7 +99,11 @@ public IActionResult GetForecast([FromBody] WeatherRequest request)
     }
     catch (Exception ex)
     {
-        _logger.LogError(ex, "Error occurred in GetForecast");
+        _logger.LogError(
+    ex,
+    "Error occurred in GetForecast. Correlation ID: {CorrelationId}",
+    HttpContext.Items["CorrelationId"]
+);
 
         return StatusCode(500, new ApiResponse<object>
         {
@@ -113,20 +117,20 @@ public IActionResult GetForecast([FromBody] WeatherRequest request)
            /// </summary>
           /// <returns>Current date and time information.</returns>
             // GET: api/weather/date
-           [HttpGet("date")]
-public IActionResult GetDate()
+          [HttpGet("date")]
+public IActionResult GetDate([FromQuery] string name = "Guest")
 {
     try
     {
-         _logger.LogInformation(
-        "Date endpoint called. Correlation ID: {CorrelationId}",
-        HttpContext.Items["CorrelationId"]
-    );
+        _logger.LogInformation(
+            "Date endpoint called by {Name}",
+            name
+        );
 
         return Ok(new ApiResponse<object>
         {
             Success = true,
-            Message = "Current server date and time",
+            Message = $"Hello {name}",
             Data = new
             {
                 Date = DateTime.Now
@@ -135,11 +139,7 @@ public IActionResult GetDate()
     }
     catch (Exception ex)
     {
-        _logger.LogError(
-    ex,
-    "Error occurred in GetForecast. Correlation ID: {CorrelationId}",
-    HttpContext.Items["CorrelationId"]
-);
+        _logger.LogError(ex, "Error occurred in GetDate");
 
         return StatusCode(500, new ApiResponse<object>
         {

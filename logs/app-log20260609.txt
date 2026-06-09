@@ -3,3 +3,57 @@
 2026-06-09 06:22:09.899 -07:00 [INF] Hosting environment: Development
 2026-06-09 06:22:09.901 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
 2026-06-09 06:23:23.338 -07:00 [INF] Application is shutting down...
+2026-06-09 06:32:30.354 -07:00 [INF] Now listening on: http://localhost:5131
+2026-06-09 06:32:30.442 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-09 06:32:30.446 -07:00 [INF] Hosting environment: Development
+2026-06-09 06:32:30.452 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
+2026-06-09 06:34:08.605 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/ - null null
+2026-06-09 06:34:08.789 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-06-09 06:34:08.813 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/ - 404 0 null 219.8062ms
+2026-06-09 06:34:08.878 -07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5131/, Response status code: 404
+2026-06-09 06:34:39.682 -07:00 [INF] Application is shutting down...
+2026-06-09 06:38:04.174 -07:00 [INF] Now listening on: http://localhost:5131
+2026-06-09 06:38:04.282 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-09 06:38:04.285 -07:00 [INF] Hosting environment: Development
+2026-06-09 06:38:04.300 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
+2026-06-09 06:38:50.306 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/ - null null
+2026-06-09 06:38:50.485 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-06-09 06:38:50.491 -07:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-06-09 06:38:50.514 -07:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-06-09 06:38:50.521 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/ - 200 null text/plain; charset=utf-8 220.3211ms
+2026-06-09 06:39:10.966 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.html - null null
+2026-06-09 06:39:11.128 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.html - 304 null null 164.2485ms
+2026-06-09 06:39:11.200 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.css - null null
+2026-06-09 06:39:11.200 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - null null
+2026-06-09 06:39:11.201 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.js - null null
+2026-06-09 06:39:11.201 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-09 06:39:11.201 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - null null
+2026-06-09 06:39:11.276 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.js - 304 null null 75.2392ms
+2026-06-09 06:39:11.287 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.css - 304 null null 87.3522ms
+2026-06-09 06:39:11.288 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - 304 null null 87.8561ms
+2026-06-09 06:39:11.313 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - 304 null null 112.1479ms
+2026-06-09 06:39:11.340 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - 304 null null 138.6099ms
+2026-06-09 06:39:12.361 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - null null
+2026-06-09 06:39:12.672 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 311.528ms
+2026-06-09 06:40:12.243 -07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5131/api/Weather/forecast - application/json 59
+2026-06-09 06:40:12.281 -07:00 [INF] Executing endpoint 'MyApi.Controllers.WeatherController.GetForecast (MyApi)'
+2026-06-09 06:40:12.379 -07:00 [INF] Route matched with {action = "GetForecast", controller = "Weather"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetForecast(MyApi.Models.WeatherRequest) on controller MyApi.Controllers.WeatherController (MyApi).
+2026-06-09 06:40:12.478 -07:00 [INF] Forecast generated successfully for Lagos. Correlation ID: 00-ca913db3f4f1dab089b4133cfd97b12c-6177006c0ae52971-00
+2026-06-09 06:40:12.480 -07:00 [INF] Forecast request received for city: Lagos. Correlation ID: 00-ca913db3f4f1dab089b4133cfd97b12c-6177006c0ae52971-00
+2026-06-09 06:40:12.483 -07:00 [INF] Forecast generated successfully for Lagos
+2026-06-09 06:40:12.495 -07:00 [INF] Executing OkObjectResult, writing value of type 'MyApi.Models.ApiResponse`1[[MyApi.Controllers.WeatherController+WeatherForecast, MyApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-09 06:40:12.558 -07:00 [INF] Executed action MyApi.Controllers.WeatherController.GetForecast (MyApi) in 154.7916ms
+2026-06-09 06:40:12.561 -07:00 [INF] Executed endpoint 'MyApi.Controllers.WeatherController.GetForecast (MyApi)'
+2026-06-09 06:40:12.562 -07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5131/api/Weather/forecast - 200 null application/json; charset=utf-8 319.6911ms
+2026-06-09 06:47:41.359 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/api/weather/date?name=Timileyin - null null
+2026-06-09 06:47:41.440 -07:00 [INF] Executing endpoint 'MyApi.Controllers.WeatherController.GetDate (MyApi)'
+2026-06-09 06:47:41.478 -07:00 [INF] Route matched with {action = "GetDate", controller = "Weather"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDate() on controller MyApi.Controllers.WeatherController (MyApi).
+2026-06-09 06:47:41.489 -07:00 [INF] Date endpoint called. Correlation ID: 00-069bf7cb562d16744b11996ca26c36e1-f15203e787905c33-00
+2026-06-09 06:47:41.500 -07:00 [INF] Executing OkObjectResult, writing value of type 'MyApi.Models.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-09 06:47:41.621 -07:00 [INF] Executed action MyApi.Controllers.WeatherController.GetDate (MyApi) in 138.9525ms
+2026-06-09 06:47:41.901 -07:00 [INF] Executed endpoint 'MyApi.Controllers.WeatherController.GetDate (MyApi)'
+2026-06-09 06:47:41.912 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/api/weather/date?name=Timileyin - 200 null application/json; charset=utf-8 553.8603ms
+2026-06-09 06:47:42.010 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/favicon.ico - null null
+2026-06-09 06:47:42.032 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/favicon.ico - 404 0 null 22.0272ms
+2026-06-09 06:47:42.058 -07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5131/favicon.ico, Response status code: 404
+2026-06-09 06:48:15.640 -07:00 [INF] Application is shutting down...
