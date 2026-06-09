@@ -10,84 +10,145 @@
         [Route("api/[controller]")]
         public class WeatherController : ControllerBase
         {
+            private readonly ILogger<WeatherController> _logger;
             private static readonly string[] Summaries =
             {
                 "Freezing", "Bracing", "Chilly", "Cool", "Mild",
                 "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
             };
+            public WeatherController(ILogger<WeatherController> logger)
+        {
+            _logger = logger;
+        }
             /// <summary>
            /// Generates a weather forecast for a specified city and date.
            /// </summary>
            /// <param name="request">Weather request containing city, date, and number of days.</param>
            /// <returns>A weather forecast result.</returns>
             // POST: api/weather/forecast
-            [HttpPost("forecast")]
-            public IActionResult GetForecast([FromBody] WeatherRequest request)
+     [HttpPost("forecast")]
+public IActionResult GetForecast([FromBody] WeatherRequest request)
+{
+   _logger.LogInformation(
+    "Forecast generated successfully for {City}. Correlation ID: {CorrelationId}",
+    request.City,
+    HttpContext.Items["CorrelationId"]
+);
+    //throw new Exception("Exception outside try-catch");
+    try
+    {
+        _logger.LogInformation(
+        "Forecast request received for city: {City}. Correlation ID: {CorrelationId}",
+        request.City,
+        HttpContext.Items["CorrelationId"]
+    );
+
+      // throw new Exception("Exception inside try-catch");
+        if (string.IsNullOrWhiteSpace(request.City))
+        {
+            _logger.LogWarning("City was missing in request");
+
+            return BadRequest(new ApiResponse<object>
             {
-                if (string.IsNullOrWhiteSpace(request.City))
-                {
-                    return BadRequest("City is required.");
-                }
-                
-                var validCities = new[] { "Lagos", "Abuja", "Ibadan", "Port Harcourt" };
+                Success = false,
+                Message = "City is required."
+            });
+        }
 
-                if (!  validCities.Contains(request.City))
-                {
-                    return BadRequest("City is invalid.");
-                }
+        var validCities = new[] { "Lagos", "Abuja", "Ibadan", "Port Harcourt" };
 
+        if (!validCities.Contains(request.City))
+        {
+            _logger.LogWarning("Invalid city attempted: {City}", request.City);
 
-                var today = DateOnly.FromDateTime(DateTime.Today);
-                var maxFuture = today.AddDays(30);
+            return BadRequest(new ApiResponse<object>
+            {
+                Success = false,
+                Message = "City is invalid."
+            });
+        }
 
-                if (request.Date < maxFuture)
-                {
-                    return BadRequest("Date must be in the past or within 30 days into the future.");
-                }
-                
-                var forecast = new WeatherForecast(
-                    request.Date,
-                    Random.Shared.Next(-20, 55),
-                    Summaries[Random.Shared.Next(Summaries.Length)]
-                );
+        var today = DateOnly.FromDateTime(DateTime.Today);
+        var maxFuture = today.AddDays(30);
 
-                return Ok(forecast);
-            }
+        if (request.Date > maxFuture)
+        {
+            _logger.LogWarning("Future date too far: {Date}", request.Date);
+
+            return BadRequest(new ApiResponse<object>
+            {
+                Success = false,
+                Message = "Date cannot be more than 30 days in the future."
+            });
+        }
+
+        var forecast = new WeatherForecast(
+            request.Date,
+            Random.Shared.Next(-20, 55),
+            Summaries[Random.Shared.Next(Summaries.Length)]
+        );
+
+        _logger.LogInformation("Forecast generated successfully for {City}", request.City);
+
+        return Ok(new ApiResponse<WeatherForecast>
+        {
+            Success = true,
+            Message = "Forecast generated successfully.",
+            Data = forecast
+        });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error occurred in GetForecast");
+
+        return StatusCode(500, new ApiResponse<object>
+        {
+            Success = false,
+            Message = "An unexpected error occurred."
+        });
+    }
+}
             /// <summary>
             /// Returns the current server date and time.
            /// </summary>
           /// <returns>Current date and time information.</returns>
             // GET: api/weather/date
-            [HttpGet("date")]
-            public IActionResult GetDate()
-            {
-                return Ok(new
-                {
-                    date = DateTime.Now,
-                    message = "Current server date and time"
-                });
-            }
-            /// <summary>
-        /// Accepts and validates a weather request.
-        /// </summary>
-        /// <param name="request">Weather request data.</param>
-        /// <returns>A confirmation message and the submitted request.</returns>
-            // POST: api/weather/request
-            [HttpPost("request")]
-            public IActionResult CreateWeatherRequest(WeatherRequest request)
-            {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
+           [HttpGet("date")]
+public IActionResult GetDate()
+{
+    try
+    {
+         _logger.LogInformation(
+        "Date endpoint called. Correlation ID: {CorrelationId}",
+        HttpContext.Items["CorrelationId"]
+    );
 
-                return Ok(new
-                {
-                    Message = "Request received successfully",
-                    Data = request
-                });
+        return Ok(new ApiResponse<object>
+        {
+            Success = true,
+            Message = "Current server date and time",
+            Data = new
+            {
+                Date = DateTime.Now
             }
-        }
+        });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(
+    ex,
+    "Error occurred in GetForecast. Correlation ID: {CorrelationId}",
+    HttpContext.Items["CorrelationId"]
+);
+
+        return StatusCode(500, new ApiResponse<object>
+        {
+            Success = false,
+            Message = "An unexpected error occurred."
+        });
+    }
+}
+            
 
         /// <summary>
     /// Represents a weather forecast response.
@@ -100,3 +161,4 @@
             public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
         }
     }
+ }

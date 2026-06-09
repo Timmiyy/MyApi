@@ -1,0 +1,5 @@
+2026-06-09 06:22:09.793 -07:00 [INF] Now listening on: http://localhost:5131
+2026-06-09 06:22:09.897 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-09 06:22:09.899 -07:00 [INF] Hosting environment: Development
+2026-06-09 06:22:09.901 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
+2026-06-09 06:23:23.338 -07:00 [INF] Application is shutting down...

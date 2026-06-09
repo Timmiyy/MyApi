@@ -22,24 +22,17 @@
             </summary>
             <returns>Current date and time information.</returns>
         </member>
-        <member name="M:MyApi.Controllers.WeatherController.CreateWeatherRequest(MyApi.Models.WeatherRequest)">
-            <summary>
-            Accepts and validates a weather request.
-            </summary>
-            <param name="request">Weather request data.</param>
-            <returns>A confirmation message and the submitted request.</returns>
-        </member>
-        <member name="T:MyApi.Controllers.WeatherForecast">
+        <member name="T:MyApi.Controllers.WeatherController.WeatherForecast">
             <summary>
             Represents a weather forecast response.
             </summary>
         </member>
-        <member name="M:MyApi.Controllers.WeatherForecast.#ctor(System.DateOnly,System.Int32,System.String)">
+        <member name="M:MyApi.Controllers.WeatherController.WeatherForecast.#ctor(System.DateOnly,System.Int32,System.String)">
             <summary>
             Represents a weather forecast response.
             </summary>
         </member>
-        <member name="P:MyApi.Controllers.WeatherForecast.TemperatureF">
+        <member name="P:MyApi.Controllers.WeatherController.WeatherForecast.TemperatureF">
             <summary>
             Temperature converted to Fahrenheit.
             </summary>
