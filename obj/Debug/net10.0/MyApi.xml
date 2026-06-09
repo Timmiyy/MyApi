@@ -16,7 +16,7 @@
             <param name="request">Weather request containing city, date, and number of days.</param>
             <returns>A weather forecast result.</returns>
         </member>
-        <member name="M:MyApi.Controllers.WeatherController.GetDate">
+        <member name="M:MyApi.Controllers.WeatherController.GetDate(System.String)">
             <summary>
             Returns the current server date and time.
             </summary>

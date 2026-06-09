@@ -57,3 +57,108 @@
 2026-06-09 06:47:42.032 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/favicon.ico - 404 0 null 22.0272ms
 2026-06-09 06:47:42.058 -07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5131/favicon.ico, Response status code: 404
 2026-06-09 06:48:15.640 -07:00 [INF] Application is shutting down...
+2026-06-09 06:56:18.908 -07:00 [INF] Now listening on: http://localhost:5131
+2026-06-09 06:56:19.013 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-09 06:56:19.016 -07:00 [INF] Hosting environment: Development
+2026-06-09 06:56:19.020 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
+2026-06-09 06:57:42.339 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/ - null null
+2026-06-09 06:57:42.509 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-06-09 06:57:42.513 -07:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-06-09 06:57:42.529 -07:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-06-09 06:57:42.555 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/ - 200 null text/plain; charset=utf-8 233.133ms
+2026-06-09 06:58:06.544 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.html - null null
+2026-06-09 06:58:06.745 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.html - 304 null null 213.0476ms
+2026-06-09 06:58:06.793 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.css - null null
+2026-06-09 06:58:06.793 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - null null
+2026-06-09 06:58:06.793 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-09 06:58:06.797 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - null null
+2026-06-09 06:58:06.859 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.css - 304 null null 66.2659ms
+2026-06-09 06:58:06.861 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - 304 null null 68.3531ms
+2026-06-09 06:58:06.880 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - 304 null null 86.9203ms
+2026-06-09 06:58:06.895 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - 304 null null 97.769ms
+2026-06-09 06:58:06.905 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.js - null null
+2026-06-09 06:58:07.031 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.js - 304 null null 125.9564ms
+2026-06-09 06:58:07.772 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - null null
+2026-06-09 06:58:08.038 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 265.9059ms
+2026-06-09 06:58:27.991 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/api/Account/getall - null null
+2026-06-09 06:58:28.032 -07:00 [INF] Executing endpoint 'BankingApi.Controllers.AccountController.GetAll (MyApi)'
+2026-06-09 06:58:28.065 -07:00 [INF] Route matched with {action = "GetAll", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BankingApi.Controllers.AccountController (MyApi).
+2026-06-09 06:58:28.084 -07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BankingApi.Models.Account, MyApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-09 06:58:28.127 -07:00 [INF] Executed action BankingApi.Controllers.AccountController.GetAll (MyApi) in 52.3901ms
+2026-06-09 06:58:28.129 -07:00 [INF] Executed endpoint 'BankingApi.Controllers.AccountController.GetAll (MyApi)'
+2026-06-09 06:58:28.131 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/api/Account/getall - 200 null application/json; charset=utf-8 139.7326ms
+2026-06-09 06:58:58.628 -07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/123456 - null null
+2026-06-09 06:58:58.670 -07:00 [INF] Executing endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 06:58:58.703 -07:00 [INF] Route matched with {action = "Delete", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankingApi.Controllers.AccountController (MyApi).
+2026-06-09 06:58:58.728 -07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2026-06-09 06:58:58.764 -07:00 [INF] Executed action BankingApi.Controllers.AccountController.Delete (MyApi) in 50.4909ms
+2026-06-09 06:58:58.768 -07:00 [INF] Executed endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 06:58:58.769 -07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/123456 - 404 null application/problem+json; charset=utf-8 141.3464ms
+2026-06-09 07:00:12.186 -07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5131/api/Account/create - application/json 60
+2026-06-09 07:00:12.223 -07:00 [INF] Executing endpoint 'BankingApi.Controllers.AccountController.Create (MyApi)'
+2026-06-09 07:00:12.248 -07:00 [INF] Route matched with {action = "Create", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(BankingApi.Models.Account) on controller BankingApi.Controllers.AccountController (MyApi).
+2026-06-09 07:00:12.292 -07:00 [INF] Executing OkObjectResult, writing value of type 'BankingApi.Models.Account'.
+2026-06-09 07:00:12.304 -07:00 [INF] Executed action BankingApi.Controllers.AccountController.Create (MyApi) in 51.6466ms
+2026-06-09 07:00:12.307 -07:00 [INF] Executed endpoint 'BankingApi.Controllers.AccountController.Create (MyApi)'
+2026-06-09 07:00:12.308 -07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5131/api/Account/create - 200 null application/json; charset=utf-8 122.1428ms
+2026-06-09 07:00:49.473 -07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/123456 - null null
+2026-06-09 07:00:49.525 -07:00 [INF] Executing endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 07:00:49.528 -07:00 [INF] Route matched with {action = "Delete", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankingApi.Controllers.AccountController (MyApi).
+2026-06-09 07:00:49.572 -07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2026-06-09 07:00:49.607 -07:00 [INF] Executed action BankingApi.Controllers.AccountController.Delete (MyApi) in 44.3256ms
+2026-06-09 07:00:49.622 -07:00 [INF] Executed endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 07:00:49.628 -07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/123456 - 404 null application/problem+json; charset=utf-8 155.7243ms
+2026-06-09 07:01:11.954 -07:00 [INF] Application is shutting down...
+2026-06-09 07:01:48.988 -07:00 [INF] Now listening on: http://localhost:5131
+2026-06-09 07:01:49.081 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-09 07:01:49.083 -07:00 [INF] Hosting environment: Development
+2026-06-09 07:01:49.085 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
+2026-06-09 07:02:14.336 -07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/1 - null null
+2026-06-09 07:02:14.457 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-06-09 07:02:14.462 -07:00 [INF] Executing endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 07:02:14.485 -07:00 [INF] Route matched with {action = "Delete", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankingApi.Controllers.AccountController (MyApi).
+2026-06-09 07:02:14.528 -07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2026-06-09 07:02:14.650 -07:00 [INF] Executed action BankingApi.Controllers.AccountController.Delete (MyApi) in 138.4887ms
+2026-06-09 07:02:14.653 -07:00 [INF] Executed endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 07:02:14.663 -07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/1 - 404 null application/problem+json; charset=utf-8 329.6863ms
+2026-06-09 07:02:36.284 -07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/1 - null null
+2026-06-09 07:02:36.308 -07:00 [INF] Executing endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 07:02:36.319 -07:00 [INF] Route matched with {action = "Delete", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller BankingApi.Controllers.AccountController (MyApi).
+2026-06-09 07:02:36.326 -07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2026-06-09 07:02:36.330 -07:00 [INF] Executed action BankingApi.Controllers.AccountController.Delete (MyApi) in 5.9502ms
+2026-06-09 07:02:36.338 -07:00 [INF] Executed endpoint 'BankingApi.Controllers.AccountController.Delete (MyApi)'
+2026-06-09 07:02:36.345 -07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5131/api/Account/delete/1 - 404 null application/problem+json; charset=utf-8 61.4326ms
+2026-06-09 07:05:27.483 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.html - null null
+2026-06-09 07:05:27.645 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.html - 304 null null 162.2155ms
+2026-06-09 07:05:27.899 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - null null
+2026-06-09 07:05:27.899 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.css - null null
+2026-06-09 07:05:27.900 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - null null
+2026-06-09 07:05:27.906 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-09 07:05:27.909 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.js - null null
+2026-06-09 07:05:27.945 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - 304 null null 45.755ms
+2026-06-09 07:05:27.945 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.css - 304 null null 45.6293ms
+2026-06-09 07:05:27.961 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - 304 null null 60.5016ms
+2026-06-09 07:05:27.984 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - 304 null null 76.8077ms
+2026-06-09 07:05:28.010 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.js - 304 null null 101.4866ms
+2026-06-09 07:05:28.806 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - null null
+2026-06-09 07:05:29.044 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 238.0871ms
+2026-06-09 07:10:26.263 -07:00 [INF] Application is shutting down...
+2026-06-09 07:10:48.807 -07:00 [INF] Now listening on: http://localhost:5131
+2026-06-09 07:10:48.954 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-09 07:10:48.959 -07:00 [INF] Hosting environment: Development
+2026-06-09 07:10:48.968 -07:00 [INF] Content root path: C:\Users\timmy\Desktop\MyApi
+2026-06-09 07:11:16.073 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.html - null null
+2026-06-09 07:11:16.292 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.html - 304 null null 220.5712ms
+2026-06-09 07:11:16.338 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.js - null null
+2026-06-09 07:11:16.338 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/index.css - null null
+2026-06-09 07:11:16.338 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - null null
+2026-06-09 07:11:16.339 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-09 07:11:16.372 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - null null
+2026-06-09 07:11:16.387 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.js - 304 null null 48.5475ms
+2026-06-09 07:11:16.426 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/index.css - 304 null null 89.5555ms
+2026-06-09 07:11:16.428 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-bundle.js - 304 null null 91.701ms
+2026-06-09 07:11:16.450 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui-standalone-preset.js - 304 null null 111.2507ms
+2026-06-09 07:11:16.454 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/swagger-ui.css - 304 null null 81.7581ms
+2026-06-09 07:11:16.699 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - null null
+2026-06-09 07:11:16.977 -07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5131/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 278.1624ms
+2026-06-09 07:13:18.156 -07:00 [INF] Application is shutting down...
